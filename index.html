@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<meta charset="utf-8">
+<style>
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+circle {
+  fill: rgb(62, 119, 180);
+  fill-opacity: .25;
+  stroke: rgb(62, 119, 180);
+  stroke-width: 1px;
+}
+
+.leaf circle {
+  fill: #12FF0E;
+  fill-opacity: 1;
+}
+
+text {
+  font: 10px sans-serif;
+}
+
+#stage, #detail {
+  float: left;
+}
+
+#detail {
+  width: 200px;
+  margin-left: 20px;
+}
+
+#stage {
+  position: relative;
+}
+#loading {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  top: 45%;
+}
+
+</style>
+
+
+<div id=stage>
+  <h2 id=loading>Loading...</h2>
+  <svg id=viz width=800 height=800></svg>
+</div>
+<div id=detail>
+  <p class=comment></p>
+  <p>
+    Replies: 
+    <span class=replies></span>
+  </p>
+  <p>
+    Thread size: 
+    <span class=thread-size></span>
+  </p>
+</div>
+
+<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<script src="vis.js" charset="utf-8"></script>
